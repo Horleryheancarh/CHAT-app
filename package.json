@@ -1,0 +1,22 @@
+{
+  "name": "chat-app",
+  "version": "1.0.0",
+  "description": "A chat application that allows users to set username and start chatting in a room like environment",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main",
+    "dev": "nodemon main"
+  },
+  "author": "Horleryheancarh",
+  "license": "MIT",
+  "dependencies": {
+    "fastify": "^3.15.1",
+    "fastify-socket.io": "^2.0.0",
+    "fastify-static": "^4.2.0",
+    "moment": "^2.29.1",
+    "socket.io": "^4.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
