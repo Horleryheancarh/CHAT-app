@@ -76,4 +76,15 @@ app.ready(err => {
   })
 })
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
+// START SERVER
+const start = async () => {
+  try {
+      await app.listen(process.env.PORT || 3000, process.env.HOST || '0.0.0.0')
+      app.log.info(`Server started at ${fastify.server.address().port}`)
+  } catch (error) {
+      app.log.error(error)
+  }
+
+}
+
+start()
