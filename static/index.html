@@ -5,18 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- Compiled and minified CSS
+    <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    Compiled and minified JavaScript 
+    <!-- Compiled and minified JavaScript  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    Compiled and minified Javascript 
+    <!-- Compiled and minified Javascript  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    Compiled and minified Javascript 
+    <!-- Compiled and minified Javascript  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    -->
 </head>
 <body>
-    <div class="container ">
+    <div class="container">
         <div class="h2">
             ChatAPP
         </div>
@@ -25,16 +24,16 @@
                 <div class="row">
                     <div class="input-field col s6">
                         <input placeholder="Username" name="username" id="username" type="text">
+                    </div> <br>
+                    <div class="input-field col s6">
+                        <select name="room", id="room">
+                            <option disabled selected>Choose your option</option>
+                            <option value="JavaScript">JavaScript</option>
+                            <option value="Python">Python</option>
+                            <option value="PHP">PHP</option>
+                        </select>
+                        <label>Chat Rooms</label>
                     </div>
-                </div>
-                <div class="input-field col s6">
-                    <label>Chat Rooms</label>
-                    <select name="room", id="room">
-                        <option value="" disabled selected>Choose your option</option>
-                        <option value="JavaScript">JavaScript</option>
-                        <option value="Python">Python</option>
-                        <option value="PHP">PHP</option>
-                    </select>
                 </div>
                 <button class="btn waves-effect waves-light" type="submit">Join Room
                     <i class="material-icons right">send</i>
@@ -42,4 +41,14 @@
             </form>
         </div>
 </body>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems, options);
+        });
+        
+       /* $(document).ready(function(){
+            $('select').formSelect();
+        });*/
+</script>
 </html>
